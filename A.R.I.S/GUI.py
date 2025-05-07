@@ -17,6 +17,9 @@ def setup_gui():
     text_area.insert(tk.END, f"Waking A.L.-1.S. up...\n")
     text_area.see(tk.END)
 
+    # original_listen = core.listen
+
+    
     original_speak = core.speak
     def gui_speak(text):
         name = getattr(core, 'wake_word', 'A.L.-1.S.')
