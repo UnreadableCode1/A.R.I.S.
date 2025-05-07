@@ -55,7 +55,7 @@ def main():
             if "time" in user_command:
                 now = datetime.now().strftime("%H:%M")
                 speak(F"The current time is {now}.")
-            elif "exit" in user_command or "stop" in user_command:
+            elif "exit" in user_command or "stop" in user_command or "blow up" in user_command:
                 speak("Goodnight.")
                 break
             else:
