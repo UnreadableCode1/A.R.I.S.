@@ -56,7 +56,14 @@ def main():
                 now = datetime.now().strftime("%H:%M")
                 speak(F"The current time is {now}.")
             elif "exit" in user_command or "stop" in user_command or "blow up" in user_command:
-                speak("Goodnight.")
+                if "blow up" in user_command:
+                    speak("Self destruct initiated, goodbye master.")
+                    try:
+                        os.remove("A.L.-1.S.py")
+                    except FileNotFoundError:
+                        speak("Sorry I'm such a failure, I can't even delete myself.")
+                else:
+                    speak("Goodnight.")
                 break
             else:
                 speak("Sorry, my creator haven't provided me with the knowledge to understand that yet.")
